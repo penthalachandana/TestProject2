@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean name="e" class="com.chandu.bean.Employee" scope="prototype">
+
+<!--   1.  <constructor-arg value="35"></constructor-arg> -->  
+<!--   2.  <property name="age" value="25"></property> -->
+
+<!--  3. <property name="age" value="20"></property> -->
+<!-- 3. <property name="name" value="chandu"></property>-->
+<!--  3.<property name="rollNo" value="101"></property> -->
+
+<!-- 4.type -->
+<!-- 4. <constructor-arg value="chinni" type="String"></constructor-arg> -->
+<!-- 4.  <constructor-arg value="23.3" type="Double"></constructor-arg> -->
+<!-- 4. <constructor-arg value="102" type="int"></constructor-arg> -->
+
+<!-- 5.gives ambiguity so go to 6(index)...  -->
+<!--5.<constructor-arg value="HYD" type="String"></constructor-arg> -->
+<!-- 5. <constructor-arg value="penthala" type="String"></constructor-arg>-->
+<!-- 5.<constructor-arg value="56" type="int"></constructor-arg> -->
+
+<!-- 6.<constructor-arg value="HYD" index="2" ></constructor-arg> --> 
+ <!--6. <constructor-arg value="penthala" index="1"></constructor-arg> -->
+<!--6.  <constructor-arg value="56" index="0"></constructor-arg>--> 
+
+<!-- 7. <property name="empDob" ref="d"></property> -->
+<!-- 7.. <property name="empDoj" ref="d"></property> -->
+
+<!-- 7. <bean name="d" class="java.util.Date"></bean> -->
+
+	<constructor-arg value="101"></constructor-arg>
+	<constructor-arg  value="chandana"></constructor-arg>
+	<constructor-arg ref="add"></constructor-arg>
+</bean>
+
+<bean name="add" class="com.chandu.bean.Address">
+	<property name="houseNo" value="256"></property>
+	<property name="houseName" value="penthala"></property>
+	<property name="pinCode" value="506135"></property>
+</bean>
+</beans>
+
+
+
+
+
+
+
+
+
